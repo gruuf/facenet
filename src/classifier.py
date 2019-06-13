@@ -116,7 +116,7 @@ def main(args):
                 best_class_probabilities = predictions[np.arange(len(best_class_indices)), best_class_indices]
                 
                 for i in range(len(best_class_indices)):
-                    print('%4d  %s: %.3f' % (i, class_names[best_class_indices[i]], best_class_probabilities[i]))
+                    print('%s %4d  %s: %.3f' % (paths[i], i, class_names[best_class_indices[i]], best_class_probabilities[i]))
                     
                 accuracy = np.mean(np.equal(best_class_indices, labels))
                 print('Accuracy: %.3f' % accuracy)
